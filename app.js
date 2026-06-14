@@ -31,7 +31,7 @@ function userFlash(btn){
         btn.classList.remove("userflash");
     },200);
 }
-
+ 
 function levelup(){
     userSeq=[]; 
     level++;
