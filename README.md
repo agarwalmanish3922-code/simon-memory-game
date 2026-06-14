@@ -14,7 +14,9 @@ An interactive memory-based Simon Says Game built using **HTML, CSS, and JavaScr
 - Visual button flash effects
 - User input validation
 - Game Over detection
+- Higest score tracking
 - Restart functionality
+- Persistent high score using Local Storage
 
 ## 🛠️ Technologies Used
 

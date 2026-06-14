@@ -1,6 +1,9 @@
 let gameSeq=[];
 let userSeq=[];
 
+let highestSscore=0;
+let highscoreDisplay = document.querySelector("#highscore");
+
 let btns =["yellow", "red", "purple", "green"];
 
 let started = false;
@@ -54,7 +57,13 @@ function checkAns(idx) {
             setTimeout(levelup,1000);
         }
     }else{
-        h2.innerHTML=`Game Over! Your score was <b>${level}</b> <br>Presss any key to restart`;
+        if(level>highestSscore){
+            highestSscore=level;
+            highscoreDisplay.innerText=`Highest Score: ${highestSscore}`;
+        }
+        h2.innerHTML=`Game Over! Your score was <b>${level}</b>
+        <br>Your highest score is <b>${highestSscore}</b>.
+        <br>Presss any key to restart`;
         body.style.backgroundColor = "red";
         setTimeout(function(){
             body.style.backgroundColor = "white";
